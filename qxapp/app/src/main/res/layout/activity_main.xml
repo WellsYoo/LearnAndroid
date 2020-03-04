@@ -8,11 +8,16 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:textSize="30sp"
-        android:gravity="center"
-        android:text="主界面"
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <com.ashokvarma.bottomnavigation.BottomNavigationBar
+        android:id="@+id/bottom"
+        android:layout_width ="match_parent"
+        android:layout_height="wrap_content"
+        />
 
 </LinearLayout>
