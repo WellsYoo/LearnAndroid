@@ -1,0 +1,19 @@
+ext {
+    android = [
+            applicationId    : 'com.chengyu.wells_music',
+            compileSdkVersion: 29,
+            minSdkVersion    : 21,
+            targetSdkVersion : 29,
+            versionCode      : 1,
+            versionName      : '1.0',
+            multiDexEnabled  : true
+    ]
+
+    depsVersion = [
+            appcompat: '1.1.0'
+    ]
+
+    depsLibs = [
+            appcompat: "androidx.appcompat:appcompat:${depsVersion.appcompat}"
+    ]
+}
