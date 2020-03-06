@@ -2,24 +2,8 @@ package com.chengyu.qxapp.fragment;
 
 import android.view.View;
 
-public class FragmentChat extends BaseFragment {
-    @Override
-    protected void initData() {
+import androidx.fragment.app.Fragment;
 
-    }
+public class FragmentChat extends Fragment {
 
-    @Override
-    protected void bindEvent() {
-
-    }
-
-    @Override
-    protected void initView(View view) {
-
-    }
-
-    @Override
-    protected int getLayoutID() {
-        return 0;
-    }
 }

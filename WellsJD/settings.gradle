@@ -1,0 +1,6 @@
+rootProject.name='WellsJD'
+include ':app'
+include ':latte-annotations'
+include ':latte-compiler'
+include ':latte-core'
+include ':latte-jd'

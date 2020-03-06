@@ -22,12 +22,13 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
     private BottomNavigationBar bottomNavigationBar;
     private List<Fragment> fragments;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        viewPager.findViewById(R.id.viewPager);
+        viewPager = findViewById(R.id.viewPager);
         bottomNavigationBar = findViewById(R.id.bottom);
 
         initView();
@@ -66,8 +67,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationB
         viewPager.setAdapter(new SectionsPagerAdapter(getSupportFragmentManager(), fragments));
         viewPager.addOnPageChangeListener(this);
         viewPager.setCurrentItem(0);
-
-
     }
 
     /****** ** BottomNavigationBarListener ** *****/
