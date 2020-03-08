@@ -1,4 +1,4 @@
-package com.chengyu.wells_music2;
+package com.chengyu.wells_music;
 
 import org.junit.Test;
 
