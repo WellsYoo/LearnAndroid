@@ -12,10 +12,12 @@ ext {
     depsVersion = [
             appcompat     : '1.1.0',
             magicindicator: '1.6.0',
+            okhttp        : '4.4.0',
     ]
 
     depsLibs = [
             appcompat     : "androidx.appcompat:appcompat:${depsVersion.appcompat}",
-            magicindicator: "com.github.hackware1993:MagicIndicator:${depsVersion.magicindicator}"
+            magicindicator: "com.github.hackware1993:MagicIndicator:${depsVersion.magicindicator}",
+            okhttp        : "com.squareup.okhttp3:okhttp:${depsVersion.okhttp}",
     ]
 }
