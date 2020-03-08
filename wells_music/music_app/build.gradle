@@ -32,4 +32,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation project(path: ':lib_commin_ui')
     implementation project(path: ':lib_network')
+    //rxjava库
+    implementation rootProject.depsLibs.rxjava
+    implementation rootProject.depsLibs.rxandroid
+    implementation project(path: ':lib_image_loader')
 }
