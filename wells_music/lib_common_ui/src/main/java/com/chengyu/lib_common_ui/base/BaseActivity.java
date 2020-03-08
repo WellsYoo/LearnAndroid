@@ -1,11 +1,11 @@
-package com.chengyu.lib_commin_ui.base;
+package com.chengyu.lib_common_ui.base;
 
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.FragmentActivity;
 
-import com.chengyu.lib_commin_ui.utils.StatusBarUtil;
+import com.chengyu.lib_common_ui.utils.StatusBarUtil;
 
 public class BaseActivity extends FragmentActivity {
     @Override

@@ -1,4 +1,4 @@
-package com.chengyu.lib_commin_ui;
+package com.chengyu.lib_common_ui;
 
 import android.content.Context;
 

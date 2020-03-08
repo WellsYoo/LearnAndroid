@@ -8,11 +8,10 @@ import android.view.View;
 
 import androidx.annotation.Nullable;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import com.chengyu.lib_commin_ui.base.BaseActivity;
-import com.chengyu.lib_commin_ui.pager_indictor.ScaleTransitionPagerTitleView;
+import com.chengyu.lib_common_ui.base.BaseActivity;
+import com.chengyu.lib_common_ui.pager_indictor.ScaleTransitionPagerTitleView;
 import com.chengyu.wells_music.model.CHANNEL;
 import com.chengyu.wells_music.view.home.adpater.HomePagerAdapter;
 import com.chengyu.wells_music2.R;
@@ -24,8 +23,6 @@ import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.CommonNav
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerIndicator;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.abs.IPagerTitleView;
 import net.lucode.hackware.magicindicator.buildins.commonnavigator.titles.SimplePagerTitleView;
-
-import java.nio.channels.Channel;
 
 public class HomeActivity extends BaseActivity implements View.OnClickListener {
 
