@@ -1,6 +1,6 @@
 package com.chengyu.wells_music.model.discory;
 
-import com.imooc.imooc_voice.model.BaseModel;
+import com.chengyu.wells_music.model.BaseModel;
 
 public class RecommandMiddleValue extends BaseModel {
 

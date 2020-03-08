@@ -1,6 +1,6 @@
 package com.chengyu.wells_music.model.user;
 
-import com.imooc.imooc_voice.model.BaseModel;
+import com.chengyu.wells_music.model.BaseModel;
 
 /**
  * 用户数据协议
