@@ -4,7 +4,9 @@ import android.content.Context;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
+import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
 import androidx.drawerlayout.widget.DrawerLayout;
@@ -13,7 +15,9 @@ import androidx.viewpager.widget.ViewPager;
 import com.chengyu.lib_common_ui.base.BaseActivity;
 import com.chengyu.lib_common_ui.pager_indictor.ScaleTransitionPagerTitleView;
 import com.chengyu.wells_music.model.CHANNEL;
+import com.chengyu.wells_music.utils.UserManager;
 import com.chengyu.wells_music.view.home.adpater.HomePagerAdapter;
+import com.chengyu.wells_music.view.login.LoginActivity;
 import com.chengyu.wells_music2.R;
 
 import net.lucode.hackware.magicindicator.MagicIndicator;
@@ -34,6 +38,9 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
     private View mSearchView;
     private ViewPager mViewPager;
     private HomePagerAdapter mAdapter;
+    private View unLogginLayout;
+
+    private ImageView mPhotoView;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -54,9 +61,12 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
         mAdapter = new HomePagerAdapter(getSupportFragmentManager(), CHANNELS);
         mViewPager = findViewById(R.id.view_pager);
         mViewPager.setAdapter(mAdapter);
-
         initMagicIndicator();
 
+        //登录相关UI
+        unLogginLayout = findViewById(R.id.unloggin_layout);
+        unLogginLayout.setOnClickListener(this);
+        mPhotoView = findViewById(R.id.avatr_view);
     }
 
     //初始化指示器
@@ -109,6 +119,14 @@ public class HomeActivity extends BaseActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-
+        switch (v.getId()){
+            case R.id.unloggin_layout:
+                if (!UserManager.getInstance().hasLogined()) {
+                    LoginActivity.start(this);
+                } else {
+                    mDrawerLayout.closeDrawer(Gravity.LEFT);
+                }
+                break;
+        }
     }
 }
