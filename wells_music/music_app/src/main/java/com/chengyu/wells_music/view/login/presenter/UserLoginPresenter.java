@@ -1,5 +1,6 @@
 package com.chengyu.wells_music.view.login.presenter;
 
+import com.chengyu.wells_music.model.login.LoginEvent;
 import com.google.gson.Gson;
 import com.chengyu.wells_music.api.MockData;
 import com.chengyu.wells_music.api.RequestCenter;
@@ -10,8 +11,7 @@ import com.chengyu.wells_music.view.login.inter.IUserLoginPresenter;
 import com.chengyu.wells_music.view.login.inter.IUserLoginView;
 import com.chengyu.lib_network.okhttp.listener.DisposeDataListener;
 
-//import org.greenrobot.eventbus.EventBus;
-
+import org.greenrobot.eventbus.EventBus;
 /**
  * 登陆页面对应Presenter
  */
@@ -35,7 +35,7 @@ public class UserLoginPresenter implements IUserLoginPresenter, DisposeDataListe
         User user = (User) responseObj;
         UserManager.getInstance().setUser(user);
         //发送登陆Event
-//        EventBus.getDefault().post(new LoginEvent());
+        EventBus.getDefault().post(new LoginEvent());
         mIView.finishActivity();
     }
 

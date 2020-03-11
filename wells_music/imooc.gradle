@@ -18,7 +18,7 @@ ext {
             glidecompiler : '4.11.0',
             rxjava         : '3.0.0',
             rxandroid      : '3.0.0',
-
+            eventbus       : '3.2.0',
     ]
 
     depsLibs = [
@@ -31,5 +31,6 @@ ext {
             glidecompiler : "com.github.bumptech.glide:compiler:${depsVersion.glidecompiler}",
             rxjava         : "io.reactivex.rxjava3:rxjava:${depsVersion.rxjava}",
             rxandroid      : "io.reactivex.rxjava3:rxandroid:${depsVersion.rxandroid}",
+            eventbus       : "org.greenrobot:eventbus:${depsVersion.eventbus}",
     ]
 }

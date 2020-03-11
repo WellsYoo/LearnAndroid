@@ -7,53 +7,63 @@ import com.chengyu.wells_music.model.user.User;
  */
 public class UserManager {
 
-  private static UserManager userManager = null;
-  private User user = null;
+    private static UserManager userManager = null;
+    private User user = null;
 
-  public static UserManager getInstance() {
-
-    if (userManager == null) {
-
-      synchronized (UserManager.class) {
+    //双检查机制
+    public static UserManager getInstance() {
 
         if (userManager == null) {
 
-          userManager = new UserManager();
+            synchronized (UserManager.class) {
+
+                if (userManager == null) {
+
+                    userManager = new UserManager();
+                }
+                return userManager;
+            }
+        } else {
+
+            return userManager;
         }
-        return userManager;
-      }
-    } else {
-
-      return userManager;
     }
-  }
 
-  /**
-   * init the user
-   */
-  public void setUser(User user) {
+    /**
+     * init the user
+     */
+    public void setUser(User user) {
 
-    this.user = user;
-  }
+        this.user = user;
+        saveLocal(user);
+    }
 
-  public boolean hasLogined() {
+    public void saveLocal(User user) {
 
-    return user == null ? false : true;
-  }
+    }
 
-  /**
-   * has user info
-   */
-  public User getUser() {
+    public boolean hasLogined() {
 
-    return this.user;
-  }
+        return user == null ? false : true;
+    }
 
-  /**
-   * remove the user info
-   */
-  public void removeUser() {
+    /**
+     * has user info
+     */
+    public User getUser() {
 
-    this.user = null;
-  }
+        return this.user;
+    }
+
+    public  User getLocal() {
+      return null;
+    }
+
+    /**
+     * remove the user info
+     */
+    public void removeUser() {
+
+        this.user = null;
+    }
 }
